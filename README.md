@@ -191,13 +191,13 @@ O projeto foi construído em equipe. A divisão abaixo resume o foco de cada pes
 
 | Pessoa | GitHub | Foco |
 |---|---|---|
-| Ester Neves | [@EsterNevess](https://github.com/EsterNevess) | base normativa (com Ana Karina), demonstração e ajustes deste repositório |
-| Ana Karina | [@anakarinagestao](https://github.com/anakarinagestao) | base normativa |
-| Alisson Lima | [@alisson10000](https://github.com/alisson10000) | base estruturada, roteamento e índice consolidado |
-| Luciano Oliveira | [@LucianoCosta21](https://github.com/LucianoCosta21) | base estruturada e melhorias do RAG |
-| Renan | [@RenanFMarins](https://github.com/RenanFMarins) | base agregada, integração do Adaptive RAG e demonstração |
-| Luiz Felipe Antunes | [@FelipeAnttunes](https://github.com/FelipeAnttunes) | membro do Time 03 |
-| Marcio Oliveira | [@MARCIO-COSTA93](https://github.com/MARCIO-COSTA93) | base conversacional, guardrails e prompts |
+| Ester Neves | [@EsterNevess](https://github.com/EsterNevess) | base normativa, demonstração e ajustes deste repositório |
+| Ana Karina | base normativa |
+| Alisson Lima | base estruturada, roteamento e índice consolidado |
+| Luciano Oliveira | base estruturada e melhorias do RAG |
+| Renan | base agregada, integração do Adaptive RAG e demonstração |
+| Luiz Felipe Antunes | base agregada |
+| Marcio Oliveira | base conversacional, guardrails e prompts |
 
 Instituições: PUC-Rio e Instituto ECOA, programa TIC em Trilhas. Os dados vêm do Portal Nacional de Contratações Públicas (PNCP) e das fontes oficiais listadas em `corpus_manifest.yaml`.
 
