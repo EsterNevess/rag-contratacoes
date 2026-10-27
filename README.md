@@ -60,8 +60,8 @@ Python · FastAPI · Uvicorn · SQLAlchemy · SQLite (FTS5) · FAISS · Pydantic
 Requisitos: Python 3.12 ou superior (testado com 3.14) e Git.
 
 ```bash
-git clone <URL-DESTE-REPOSITÓRIO>
-cd portfolio-rag-contratacoes
+git clone https://github.com/EsterNevess/rag-contratacoes.git
+cd rag-contratacoes
 
 python -m venv .venv
 # Windows (PowerShell): .\.venv\Scripts\Activate.ps1
@@ -191,7 +191,7 @@ O projeto foi construído em equipe. A divisão abaixo resume o foco de cada pes
 
 | Pessoa | GitHub | Foco |
 |---|---|---|
-| Ester Neves | autora desta cópia | base normativa (com Ana Karina), demonstração e ajustes deste repositório |
+| Ester Neves | [@EsterNevess](https://github.com/EsterNevess) | base normativa (com Ana Karina), demonstração e ajustes deste repositório |
 | Ana Karina | [@anakarinagestao](https://github.com/anakarinagestao) | base normativa |
 | Alisson Lima | [@alisson10000](https://github.com/alisson10000) | base estruturada, roteamento e índice consolidado |
 | Luciano Oliveira | [@LucianoCosta21](https://github.com/LucianoCosta21) | base estruturada e melhorias do RAG |
