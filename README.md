@@ -189,9 +189,9 @@ tests/        testes unitários e de integração
 
 O projeto foi construído em equipe. A divisão abaixo resume o foco de cada pessoa; os usernames vêm do histórico de commits do repositório do grupo.
 
-| Pessoa | GitHub | Foco |
-|---|---|---|
-| Ester Neves | [@EsterNevess](https://github.com/EsterNevess) | base normativa, demonstração e ajustes deste repositório |
+| Pessoa | Foco |
+|---|---|
+| Ester Neves [@EsterNevess](https://github.com/EsterNevess) | base normativa, demonstração e ajustes deste repositório |
 | Ana Karina | base normativa |
 | Alisson Lima | base estruturada, roteamento e índice consolidado |
 | Luciano Oliveira | base estruturada e melhorias do RAG |
