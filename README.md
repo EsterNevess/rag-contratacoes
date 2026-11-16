@@ -141,15 +141,22 @@ python -m streamlit run app/streamlit_console.py
 - API e Swagger: http://127.0.0.1:8000/docs
 - Console de perguntas: http://127.0.0.1:8501 (entre com o usuário criado)
 
-## Exemplos de perguntas
+## Exemplos de uso
 
-| Pergunta | Rota |
-|---|---|
-| Quantas contratações existem por modalidade em 2026? | `structured` |
-| Qual o valor total dos contratos assinados em 2026? | `structured` |
-| Qual a diferença entre dispensa e inexigibilidade de licitação? | `rag` (cita a Lei 14.133) |
-| Qual a melhor empresa para eu contratar? | recusada pelo guardrail |
-| Qual é a capital da França? | recusada como fora do escopo |
+| Pergunta | Rota | O que o assistente faz |
+|---|---|---|
+| Quantas contratações existem por modalidade em 2026? | `structured` | Consulta SQL controlada na base do PNCP e responde com aviso de cobertura dos dados |
+| Qual o valor total dos contratos assinados em 2026? | `structured` | Consulta SQL controlada na base do PNCP e responde com aviso de cobertura dos dados |
+| Qual a diferença entre dispensa e inexigibilidade de licitação? | `rag` | Busca nos documentos normativos (cita a Lei 14.133) e responde com citações numeradas |
+| Qual a melhor empresa para eu contratar? | guardrail | Recusa: o assistente não recomenda fornecedores |
+| Qual é a capital da França? | guardrail | Recusa: fora do escopo de contratações públicas |
+
+### Como são as respostas
+
+- **Perguntas sobre dados (`structured`):** a resposta vem acompanhada de um aviso sobre a cobertura dos dados.
+- **Perguntas sobre normas (`rag`):** a resposta traz citações numeradas das fontes.
+- **Todas as consultas:** ficam registradas com um `trace_id`, que permite auditar o caminho percorrido.
+- **Planos inválidos:** viram erro explicável (HTTP 422), em vez de uma resposta inventada.
 
 ## Testes
 
@@ -158,7 +165,7 @@ export DATABASE_URL=sqlite:///./teste.db JWT_SECRET_KEY=<chave de teste>
 python -m pytest tests -q
 ```
 
-Na última execução, 810 testes passaram. Há 16 falhas conhecidas, já presentes no projeto original (geração com "thinking", observabilidade de HTTP, sanitização e inventário de escopo), e 1 teste que depende de dados locais. Estão listadas na seção de limitações.
+Na última execução, 810 testes passaram. Há 16 falhas conhecidas, já presentes no projeto original (geração com "thinking", observabilidade de HTTP, sanitização e inventário de escopo), e 1 teste que depende de dados locais.
 
 ## Limitações conhecidas
 
@@ -187,11 +194,11 @@ O projeto foi construído em equipe. A divisão abaixo resume o foco de cada pes
 
 | Pessoa | Foco |
 |---|---|
-| Ester Neves [@EsterNevess](https://github.com/EsterNevess) | base normativa, demonstração e ajustes deste repositório |
+| Ester Neves [@EsterNevess](https://github.com/EsterNevess) | base normativa, apresentação e ajustes deste repositório |
 | Ana Karina | base normativa |
 | Alisson Lima | base estruturada, roteamento e índice consolidado |
 | Luciano Oliveira | base estruturada e melhorias do RAG |
-| Renan | base agregada, integração do Adaptive RAG e demonstração |
+| Renan | base agregada, integração do Adaptive RAG e apresentação |
 | Luiz Felipe Antunes | base agregada |
 | Marcio Oliveira | base conversacional, guardrails e prompts |
 
