@@ -4,8 +4,6 @@ Um assistente que responde, em linguagem natural, perguntas sobre contratações
 
 Projeto desenvolvido pelo **Time 03** na residência **TIC em Trilhas** (PUC-Rio / Instituto ECOA). Esta é a minha cópia individual para portfólio; os créditos de toda a equipe estão no fim deste arquivo.
 
----
-
 ## O problema
 
 Os dados de contratações públicas estão espalhados em contratos, atas, planos anuais e documentos longos (editais, leis, termos de referência). Perguntas simples, como "quantas contratações houve por modalidade em 2026?" ou "o que a lei diz sobre dispensa de licitação?", exigem abrir várias fontes e cruzar tudo à mão. Um chat comum, sem acesso aos dados, inventa números e artigos.
